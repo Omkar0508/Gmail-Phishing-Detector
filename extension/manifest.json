@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Phishing Detector",
+  "version": "1.0",
+  "description": "Checks Gmail for phishing emails and moves them to a label.",
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "identity"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "oauth2": {
+    "client_id": "900707367129-4m8g9naaarovgi0vkq4ufjlk3c0mu32r.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.modify"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
